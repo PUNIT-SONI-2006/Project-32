@@ -29,13 +29,13 @@ function draw(){
     fill("black");
     textSize(30);
     
-    // if(hour>=12){
-    //     text("Time : "+ hour%12 + " PM", 50,100);
-    // }else if(hour==0){
-    //     text("Time : 12 AM",100,100);
-    // }else{
-    //     text("Time : "+ hour%12 + " AM", 50,100);
-    // }
+    if(hour>=12){
+        text("Time : "+ hour%12 + " PM", 50,100);
+    }else if(hour==0){
+        text("Time : 12 AM",100,100);
+    }else{
+        text("Time : "+ hour%12 + " AM", 50,100);
+    }
 
 }
 
@@ -54,7 +54,7 @@ async function getBackgroundImg() {
     var hour = datetime.slice(11,13);    
 
     
-    if(hour>=0 && hour<18 ){
+    if(hour>=0 && hour<16 ){
         bg = "sunrise.png";
     }
     else{
