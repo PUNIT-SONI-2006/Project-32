@@ -21,7 +21,7 @@ function setup(){
 }
 
 function draw(){
-    if(backgroundImg)
+    if(backgroundImg){
         background(backgroundImg);
 
     Engine.update(engine);
@@ -36,7 +36,7 @@ function draw(){
     }else{
         text("Time : "+ hour%12 + " AM", 50,100);
     }
-
+    }
 }
 
 async function getBackgroundImg() {
@@ -54,7 +54,7 @@ async function getBackgroundImg() {
     var hour = datetime.slice(11,13);    
 
     
-    if(hour>=0 && hour<16 ){
+    if(hour>=0 && hour<=16 ){
         bg = "sunrise.png";
     }
     else{
